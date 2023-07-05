@@ -24,7 +24,7 @@ int main() {
         printf("%02X", ciphertext[i]);
         printf(" ");
     }
-    printf("\n加密时间为%fs\n", ((double)(end - start)) / CLOCKS_PER_SEC);
+    printf("\nthe time of encrypting :%fs\n", ((double)(end - start)) / CLOCKS_PER_SEC);
 
     start = clock();
     plaintext_len = decrypt(plaintext_decrypt, key, ciphertext, ciphertext_len);
@@ -34,6 +34,6 @@ int main() {
         printf("%02X", plaintext_decrypt[i]);
         printf(" ");
     }
-    printf("\n解密时间为%fs\n", ((double)(end - start)) / CLOCKS_PER_SEC);
+    printf("\nthe time of decrypting :%fs\n", ((double)(end - start)) / CLOCKS_PER_SEC);
     return 0;
 }
