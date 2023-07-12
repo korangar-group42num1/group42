@@ -3,6 +3,7 @@ from Cryptodome.Cipher import AES
 from Crypto.Util.Padding import pad
 from Crypto.Random import get_random_bytes
 from gmssl import sm2
+import time
 
 def PGP(data):
 
@@ -30,5 +31,9 @@ def PGP(data):
     return ciphertext
 
 data=b'SDU2021Project11'
+start=time.time()
 pgp_data=PGP(data)
-print(pgp_data)
+end=time.time()
+print("enc_data:\n",pgp_data,"\n")
+print("time:\n",end-start,"s")
+
