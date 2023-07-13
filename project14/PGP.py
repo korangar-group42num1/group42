@@ -30,7 +30,7 @@ def PGP(data):
 
     return ciphertext
 
-data=b'SDU2021Project11'
+data=b'SDU2021Project14'
 start=time.time()
 pgp_data=PGP(data)
 end=time.time()
