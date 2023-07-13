@@ -6,9 +6,11 @@
 
 # 运行效果
 
-加密用时 0.01200246810913086 s
+加密用时 0.0009996891021728516 s
 
-![image](https://github.com/korangar-group42num1/group42/assets/129478905/ece28091-47a8-4f95-bf32-a4dd4984149b)
+![image](https://github.com/korangar-group42num1/group42/assets/129478905/a0af10f0-10e2-4d8c-9c93-cf6df56f96ed)
+
+
 
 # 参考资料
 
