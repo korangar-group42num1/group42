@@ -18,7 +18,7 @@
 
 编译语言：C++
 
-### (2)project 2 \ project 11 \ project 14
+### (2) project 1 \ project 2 \ project 11 \ project 14
 
 操作系统：windows 11
 
@@ -34,7 +34,9 @@
 
 [Lab Report](project1/README.md)
 
-[Code]记得交
+[Code.c++]记得交
+
+[Code.python]记得交
 
 ### Project2: implement the Rho method of reduced SM3
 
