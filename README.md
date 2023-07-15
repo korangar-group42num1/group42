@@ -68,6 +68,6 @@
 
 ### Project14: Implement a PGP scheme with SM2
 
-[Lab Report]记得写
+[Lab Report](project14/README.md)
 
 [Code]记得交
