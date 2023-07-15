@@ -9,6 +9,13 @@
 ### 代码说明
 
     1.生成会话密钥
+        ```php {.line-numbers} 
+    funtion add($x, $y)
+    {
+        return $x+$y;
+    }
+    ```
+
 
     2.压缩消息 
 
