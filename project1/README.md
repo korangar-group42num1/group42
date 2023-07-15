@@ -13,43 +13,59 @@
 
 各组成功概率约等于50%，符合生日攻击原理。
 
-## 100组
-运行时间：8.576 s
+## python
 
-成功概率：45.25 %
+        python运行速度较慢，故只做简单说明，运行效果主要采用 c++
+        
+        运行时间：1851.0677404403687 s
+
+        成功概率：44.75 %
+        
+![M DI6O(2U9ZL43ZA(O9{BJ2](https://github.com/korangar-group42num1/group/assets/129478905/c378de58-d3bb-4b02-b2a0-7fb09bba7262)
+   
+### 100组
+
+![M DI6O(2U9ZL43ZA(O9{BJ2](https://github.com/korangar-group42num1/group/assets/129478905/0763a1e1-ce35-48f0-b3a2-b4e214f9844e)
+
+## c++
+
+### 100组
+        运行时间：8.576 s
+
+        成功概率：45.25 %
 
 ![D}AJMM)4ADOT~E5K~6`L0RU](https://github.com/korangar-group42num1/group42/assets/129478905/86e5c67a-da69-40b7-8282-26988499ee7e)
 
 
-## 200组
-运行时间：17.608 s
+### 200组
+        运行时间：17.608 s
 
-成功概率：46.5 %
+        成功概率：46.5 %
 
 ![C%3Y $BT7 XF`I9DCLN%`RL](https://github.com/korangar-group42num1/group42/assets/129478905/5b63e16d-6708-4ab4-80ba-91300d7acdc5)
 
-## 500组
-运行时间：54.656 s
+### 500组
+        运行时间：54.656 s
 
-成功概率：46.5 %
+        成功概率：46.5 %
 
 ![QDK@3D53CIXF600%A13~P8W](https://github.com/korangar-group42num1/group42/assets/129478905/46bd242c-1113-4064-b855-ccc2b1ff17c7)
 
-## 800组
-运行时间：73.325 %
+### 800组
+        运行时间：73.325 %
 
-成功概率：44.5312 %
+        成功概率：44.5312 %
 
 ![USKD L9 E(E5V~IB69~HA9](https://github.com/korangar-group42num1/group42/assets/129478905/e6931b9c-2f26-472c-b373-31f287db1c3d)
 
-## 1200组
-运行时间：125.504 s
+### 1200组
+        运行时间：125.504 s
 
-成功概率：43.8542 %
+        成功概率：43.8542 %
 
 ![I}7`}_3)LX2 316T FSYMWI](https://github.com/korangar-group42num1/group42/assets/129478905/26badbeb-6a03-4368-9725-9f33bfcc3cfd)
 
-## 大比特攻击
+### 大比特攻击
 1.
 ![image](https://github.com/korangar-group42num1/group42/assets/129478905/55b3f483-d5b3-4265-915d-d61f6cf98872)
 
@@ -73,8 +89,11 @@ bit|time
 
 
 # 参考资料
-    1.https://www.bilibili.com/read/cv14571497 
-    2.https://blog.csdn.net/superfjj/article/details/117729922?ops_request_misc
-    3.https://blog.csdn.net/zhizhengguan/article/details/106015398?ops_request_misc
+1.https://www.bilibili.com/read/cv14571497 
+
+2.https://blog.csdn.net/superfjj/article/details/117729922?ops_request_misc 
+
+3.https://blog.csdn.net/zhizhengguan/article/details/106015398?ops_request_misc 
+
 
 
