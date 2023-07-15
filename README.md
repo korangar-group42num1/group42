@@ -10,7 +10,7 @@
 
 ## 软件环境
 
-### (1) project 1 \ proect 9
+### (1) project 1 
 
 操作系统：windows 11
 
@@ -18,7 +18,15 @@
 
 编译语言：C++
 
-### (2) project 1 \ project 2 \ project 11 \ project 14
+### (2) proejct 9
+
+操作系统：windows 11
+
+编译器：VS 2022
+
+编译语言：C
+
+### (3) project 1 \ project 2 \ project 11 \ project 14
 
 操作系统：windows 11
 
