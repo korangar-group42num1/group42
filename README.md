@@ -54,7 +54,7 @@
 
 ### Project9: AES / SM4 software implementation
 
-[Lab Report] 记得写
+[Lab Report](project9/README.md)
 
 [Code.SM4]记得交
 
