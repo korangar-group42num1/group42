@@ -56,18 +56,18 @@
 
 [Lab Report] 记得写
 
-[Code.SM4](project9/SM4.c)
+[Code.SM4]记得交
 
-[Code.main](project9/main.c)
+[Code.main]记得交
 
 ### Project11: impl sm2 with RFC6979
 
 [Lab Report]记得写
 
-[Code](project11/SM2_with_RFC6979.py)
+[Code]记得交
 
 ### Project14: Implement a PGP scheme with SM2
 
 [Lab Report]记得写
 
-[Code](project14/PGP.py)
+[Code]记得交
