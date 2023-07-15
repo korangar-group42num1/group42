@@ -20,9 +20,7 @@
         运行时间：1851.0677404403687 s
 
         成功概率：44.75 %
-        
-![M DI6O(2U9ZL43ZA(O9{BJ2](https://github.com/korangar-group42num1/group/assets/129478905/c378de58-d3bb-4b02-b2a0-7fb09bba7262)
-   
+          
 ### 100组
 
 ![M DI6O(2U9ZL43ZA(O9{BJ2](https://github.com/korangar-group42num1/group/assets/129478905/0763a1e1-ce35-48f0-b3a2-b4e214f9844e)
