@@ -81,4 +81,6 @@ EVP_CIPHER_CTX_free(ctx);
 
 # 运行效果
 对于128bit的数据，加密用时0.001s，解密用时0s
-![image](https://github.com/korangar-group42num1/group42/assets/129478905/2488ada1-1a5b-4e82-a2e6-60eb8d653a19)
+![R{_IO}M8N$S A(UG@APSVZL](https://github.com/korangar-group42num1/group/assets/129478905/3653a6cf-0416-4234-a402-f59e96a2cf97)
+
+
