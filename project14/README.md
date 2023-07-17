@@ -2,25 +2,25 @@
 
 ## PGP
 
-此代码中对称加密算法使用`AES`，非对称加密算法使用`SM2`，压缩函数采用`SHA-256`
+此代码中对称加密算法使用**AES**，非对称加密算法使用**SM2**，压缩函数采用**SHA-256**
 
 ![image](https://github.com/korangar-group42num1/group42/assets/129478905/65c8ec14-112a-471a-afe4-a03df561978b)
 
 ### 代码说明
 
-1.生成会话密钥
+1.生成**会话密钥**
 
  ```php {.line-numbers}
 session_key = get_random_bytes(16)
  ```
 
-2.压缩消息 
+2.**压缩**消息 
 
  ```php {.line-numbers} 
  hash_data = hashlib.sha256(data).digest()
  ```
 
-3.用会话密钥和 AES 加密压缩后的消息
+3.用**会话密钥**和 **AES** 加密压缩后的消息
 
  ```php {.line-numbers} 
  iv = get_random_bytes(16)
@@ -28,7 +28,7 @@ session_key = get_random_bytes(16)
  ciphertext_aes = cipher.encrypt(pad(hash_data, AES.block_size))
  ```
 
-4.用 sm2 加密会话密钥
+4.用 **sm2** 加密**会话密钥**
 
  ```php {.line-numbers} 
 sm2_crypt = sm2.CryptSM2(public_key=public_key, private_key=private_key)
@@ -56,3 +56,5 @@ ciphertext=(ciphertext_sm2+ciphertext_aes).hex().encode('utf-8')
 # 参考资料
 
 1.https://blog.csdn.net/chengqiuming/article/details/83047116
+
+2.课程ppt：20230401-sm2-public
