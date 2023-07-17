@@ -151,6 +151,9 @@ trees differently.)
 ```
 ### Build exclusion proof for specified element
 
+![exclusion proof](https://github.com/korangar-group42num1/group/assets/129478905/2880288a-cc33-44a7-909d-54201198e49c)
+
+
 证明过程中出现错误（如消息不存在或消息位置错误），同理。
 
 ```php {.line-numbers}
