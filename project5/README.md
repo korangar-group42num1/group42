@@ -28,40 +28,41 @@
 
 ## Construct a Merkle Tree with RFC6962
 
-       Logs use a binary Merkle Hash Tree for efficient auditing.  The
-   hashing algorithm is SHA-256 [FIPS.180-4] (note that this is fixed
-   for this experiment, but it is anticipated that each log would be
-   able to specify a hash algorithm).  The input to the Merkle Tree Hash
-   is a list of data entries; these entries will be hashed to form the
-   leaves of the Merkle Hash Tree.  The output is a single 32-byte
-   Merkle Tree Hash.  Given an ordered list of n inputs, D[n] = {d(0),
-   d(1), ..., d(n-1)}, the Merkle Tree Hash (MTH) is thus defined as
-   follows:
+Logs use a binary Merkle Hash Tree for efficient auditing.  The
+hashing algorithm is SHA-256 [FIPS.180-4] (note that this is fixed
+for this experiment, but it is anticipated that each log would be
+able to specify a hash algorithm).  The input to the Merkle Tree Hash
+is a list of data entries; these entries will be hashed to form the
+leaves of the Merkle Hash Tree.  The output is a single 32-byte
+Merkle Tree Hash.  Given an ordered list of n inputs, D[n] = {d(0),
+d(1), ..., d(n-1)}, the Merkle Tree Hash (MTH) is thus defined as
+follows:
 
-   The hash of an empty list is the hash of an empty string:
+The hash of an empty list is the hash of an empty string:
 
-           MTH({}) = SHA-256().
-   The hash of a list with one entry (also known as a leaf hash) is:
+        MTH({}) = SHA-256().
+           
+The hash of a list with one entry (also known as a leaf hash) is:
    
-           MTH({d(0)}) = SHA-256(0x00 || d(0)).
+        MTH({d(0)}) = SHA-256(0x00 || d(0)).
    
-   For n > 1, let k be the largest power of two smaller than n (i.e.,
-   k < n <= 2k).  The Merkle Tree Hash of an n-element list D[n] is then
-   defined recursively as
+For n > 1, let k be the largest power of two smaller than n (i.e.,
+k < n <= 2k).  The Merkle Tree Hash of an n-element list D[n] is then
+defined recursively as
    
-           MTH(D[n]) = SHA-256(0x01 || MTH(D[0:k]) || MTH(D[k:n])),
+        MTH(D[n]) = SHA-256(0x01 || MTH(D[0:k]) || MTH(D[k:n])),
 
-   where || is concatenation and D[k1:k2] denotes the list {d(k1),
-   d(k1+1),..., d(k2-1)} of length (k2 - k1).  (Note that the hash
-   calculations for leaves and nodes differ.  This domain separation is
-   required to give second preimage resistance.)
+where || is concatenation and D[k1:k2] denotes the list {d(k1),
+d(k1+1),..., d(k2-1)} of length (k2 - k1).  (Note that the hash
+calculations for leaves and nodes differ.  This domain separation is
+required to give second preimage resistance.)
 
-   Note that we do not require the length of the input list to be a
-   power of two.  The resulting Merkle Tree may thus not be balanced;
-   however, its shape is uniquely determined by the number of leaves.
-   (Note: This Merkle Tree is essentially the same as the history tree
-   [CrosbyWallach] proposal, except our definition handles non-full
-   trees differently.)
+Note that we do not require the length of the input list to be a
+power of two.  The resulting Merkle Tree may thus not be balanced;
+however, its shape is uniquely determined by the number of leaves.
+(Note: This Merkle Tree is essentially the same as the history tree
+[CrosbyWallach] proposal, except our definition handles non-full
+trees differently.)
 
    ![Merkle Tree with RFC6962](https://github.com/korangar-group42num1/group/assets/129478905/42eed720-6c52-4aca-a307-f41bbe293a46)
 
