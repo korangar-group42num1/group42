@@ -108,9 +108,9 @@ trees differently.)
                 
 则需要获取图中阴影部分的消息，逐步计算，最后与根节点对比，一致则说明消息真实且传输无误。
 
-计算确认消息需要的节点，即消息的```哈希值的兄弟节点 ( brother node ) ```和```他们的父节点 ( father node ) 的兄弟节点```
+计算确认消息需要的节点，即消息的**哈希值的兄弟节点 ( brother node )**和**他们的父节点 ( father node ) 的兄弟节点**
 
-注意区分```左右节点```
+注意区分**左右节点**
 
 ```php {.line-numbers}
     for i in range(0,len(tree)-1):
