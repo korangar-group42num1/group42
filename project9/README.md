@@ -4,7 +4,7 @@
   
 # 实验原理
 
-运用开源库`openssl`实现SM4的软件实现（ecb模式）
+运用开源库**openssl**实现SM4的软件实现（ecb模式）
 
 ## 加密 long encrypt
 
