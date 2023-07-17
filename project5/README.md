@@ -2,11 +2,11 @@
 
 *Project: Impl Merkle Tree following RFC6962
 
-• Construct a Merkle tree with 10w leaf nodes
+        • Construct a Merkle tree with 10w leaf nodes
 
-• Build inclusion proof for specified element
+        • Build inclusion proof for specified element
 
-• Build exclusion proof for specified element
+        • Build exclusion proof for specified element
 
 
 # 实验原理
@@ -18,11 +18,10 @@
 默克尔树由根，分支（中间的非叶节点），叶节点组成。
 
 它具有以下重要的特点：
-    1.Merkle Tree是一种树，大多数是二叉树，也可以多叉树，无论是几叉树，它都具有树结构的所有特点；
-    
-    2.Merkle Tree的叶子节点的value是数据集合的单元数据或者单元数据HASH。
-    
-    3.非叶子节点的value是根据它下面所有的叶子节点值，然后按照Hash算法计算而得出的。
+
+        1.Merkle Tree是一种树，大多数是二叉树，也可以多叉树，无论是几叉树，它都具有树结构的所有特点；
+        2.Merkle Tree的叶子节点的value是数据集合的单元数据或者单元数据HASH。
+        3.非叶子节点的value是根据它下面所有的叶子节点值，然后按照Hash算法计算而得出的。
     
 ![Merkle tree](https://github.com/korangar-group42num1/group/assets/129478905/eedda94e-07dd-455d-8a82-3270055fb121)
 
