@@ -101,11 +101,16 @@ trees differently.)
 ![inclusion proof](https://github.com/korangar-group42num1/group/assets/129478905/d3dae7c3-da2a-4a2b-acb0-a7d52140d80b)
 
 要求在其他数据未送达之前，确认以下内容：
-    1.消息1的确存在于这组数据中
-    2.消息1的位置是第1位（从0开始计数）
+
+                1.消息1的确存在于这组数据中
+                
+                2.消息1的位置是第1位（从0开始计数）
+                
 则需要获取图中阴影部分的消息，逐步计算，最后与根节点对比，一致则说明消息真实且传输无误。
 
 计算确认消息需要的节点，即消息的```哈希值的兄弟节点 ( brother node ) ```和```他们的父节点 ( father node ) 的兄弟节点```
+
+注意区分```左右节点```
 
 ```php {.line-numbers}
     for i in range(0,len(tree)-1):
