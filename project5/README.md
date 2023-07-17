@@ -1,9 +1,13 @@
 # 实验内容
 
 *Project: Impl Merkle Tree following RFC6962
+
 • Construct a Merkle tree with 10w leaf nodes
+
 • Build inclusion proof for specified element
+
 • Build exclusion proof for specified element
+
 
 # 实验原理
 
@@ -15,12 +19,15 @@
 
 它具有以下重要的特点：
     1.Merkle Tree是一种树，大多数是二叉树，也可以多叉树，无论是几叉树，它都具有树结构的所有特点；
+    
     2.Merkle Tree的叶子节点的value是数据集合的单元数据或者单元数据HASH。
+    
     3.非叶子节点的value是根据它下面所有的叶子节点值，然后按照Hash算法计算而得出的。
     
 ![Merkle tree](https://github.com/korangar-group42num1/group/assets/129478905/eedda94e-07dd-455d-8a82-3270055fb121)
 
 ## Construct a Merkle Tree with RFC6962
+
        Logs use a binary Merkle Hash Tree for efficient auditing.  The
    hashing algorithm is SHA-256 [FIPS.180-4] (note that this is fixed
    for this experiment, but it is anticipated that each log would be
@@ -33,17 +40,16 @@
 
    The hash of an empty list is the hash of an empty string:
 
-   MTH({}) = SHA-256().
-
-      The hash of a list with one entry (also known as a leaf hash) is:
-
-   MTH({d(0)}) = SHA-256(0x00 || d(0)).
-
+           MTH({}) = SHA-256().
+   The hash of a list with one entry (also known as a leaf hash) is:
+   
+           MTH({d(0)}) = SHA-256(0x00 || d(0)).
+   
    For n > 1, let k be the largest power of two smaller than n (i.e.,
    k < n <= 2k).  The Merkle Tree Hash of an n-element list D[n] is then
    defined recursively as
-
-   MTH(D[n]) = SHA-256(0x01 || MTH(D[0:k]) || MTH(D[k:n])),
+   
+           MTH(D[n]) = SHA-256(0x01 || MTH(D[0:k]) || MTH(D[k:n])),
 
    where || is concatenation and D[k1:k2] denotes the list {d(k1),
    d(k1+1),..., d(k2-1)} of length (k2 - k1).  (Note that the hash
@@ -163,6 +169,9 @@ Build exclusion proof for specified element ( false meesage ) | 0.02870702743530
 Build exclusion proof for specified element ( false site ) |0.023746728897094727 s
 
 # 参考资料
+
 1.https://blog.csdn.net/wo541075754/article/details/54632929?ops_request_misc
+
 2.https://www.rfc-editor.org/rfc/rfc6962#section-2.1.2
+
 3.https://ethbook.abyteahead.com/ch4/merkle.html 
