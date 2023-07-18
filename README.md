@@ -26,7 +26,7 @@
 
 编译语言：C
 
-### (3) project 1 \ project 2 \ project 5 \ project 11 \ project 14
+### (3) project 1 \ project 2 \ project 3 \ project 5 \ project 11 \ project 14
 
 操作系统：windows 11
 
@@ -51,6 +51,14 @@
 [Lab Report](project2/REAMME.md)
 
 [Code]loading......
+
+### Project3: implement length extension attack for SM3, SHA256, etc.
+
+[Lab Report](project3/README.md)
+
+[Code.sm3]loading......
+
+[Code.length_extension_attack]loading......
 
 ### Project5: Impl Merkle Tree following RFC6962
 
