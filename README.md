@@ -26,7 +26,7 @@
 
 编译语言：C
 
-### (3) project 1 \ project 2 \ project 3 \ project 5 \ project 11 \ project 14
+### (3) project 1 \ project 2 \ project 3 \ project 4 \ project 5 \ project 11 \ project 14
 
 操作系统：windows 11
 
@@ -59,6 +59,16 @@
 [Code.sm3]loading......
 
 [Code.length_extension_attack]loading......
+
+### Project4: do your best to optimize SM3 implementation (software)
+
+[Lab Report](project4/README.md)
+
+[Code.sm3]loading......
+
+[Code.sm3_optimize]loading......
+
+[Code.test]loading......
 
 ### Project5: Impl Merkle Tree following RFC6962
 
