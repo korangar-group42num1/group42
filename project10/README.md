@@ -157,7 +157,7 @@ def verify(verify_key,signature,msg):
 
 与经典的RSA、DSA等公钥密码体制相⽐，椭圆密码体制有以下优点
 
-## 安全性能更⾼（ECC可以使⽤更短的密钥）
+## 安全性能更⾼
 
 160位ECC加密算法的安全强度相当于1024位RSA加密；
 
@@ -167,7 +167,7 @@ def verify(verify_key,signature,msg):
 
 计算量⼩，处理速度快 在私钥的处理速度上（解密和签名），ECC远 ⽐RSA、DSA快得多。
 
-## 存储空间占⽤⼩
+## 存储空间占用小
 
 ECC的密钥尺⼨和系统参数与RSA、DSA相⽐要⼩得多， 所以占⽤的存储空间⼩得多。
 
