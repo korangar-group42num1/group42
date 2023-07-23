@@ -44,7 +44,7 @@
 
 [Code.c++]loading......
 
-[Code.python]loading......
+[Code.python](project1/birthday_attack_of_reduced_SM3.py)
 
 ### Project2: implement the Rho method of reduced SM3
 
