@@ -2,7 +2,7 @@ from gmssl import sm3
 import time
 import random
 
-# 计算SM3哈希值
+# Calculate the SM3 hash
 def sm3_hash(msg):
     msg=bytearray(msg)
     h = sm3.sm3_hash(msg)
@@ -10,9 +10,6 @@ def sm3_hash(msg):
 
         
 def generate_random_str(randomlength=16):
-  """
-  生成一个指定长度的随机字符串
-  """
   random_str =''
   base_str ='ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz0123456789'
   length =len(base_str) -1
@@ -21,7 +18,7 @@ def generate_random_str(randomlength=16):
   return random_str
 
 
-#寻找碰撞
+# Collision finding
 def get_collision(n):
     str_list=[]
     index=-1
