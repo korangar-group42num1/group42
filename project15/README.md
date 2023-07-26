@@ -2,6 +2,10 @@
 
 **Project15: implement sm2 2P sign with real network communication**
 
+# 运行指导
+
+将文件夹中 **sm2.py,Alice.py,Bob.py** 文件添加至同一文件夹中，先运行**Alice.py**，再运行**Bob.py**，即可协同生成sm2签名
+
 # 实验原理
 
 **SM2协同签名方案**如图所示
