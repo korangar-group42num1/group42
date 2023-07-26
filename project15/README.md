@@ -163,6 +163,11 @@ if(s!=0 or s!=n-r):
     print(hex(s))
 ```
 
+# 参考资料
 
+1. https://blog.csdn.net/xiaofengdada/article/details/122684715?ops_request_misc
+   
+2. https://blog.csdn.net/keyboardlabourer/article/details/128917468?ops_request_misc
 
+3. 课程ppt:20230401-sm2-public
 
