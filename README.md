@@ -26,7 +26,7 @@
 
 编译语言：C
 
-### (3) project 1 \ project 2 \ project 3 \ project 4 \ project 5 \ project 10 \ project 11 \ project 14 \ project 15
+### (3) project 1 \ 2 \ 3 \ 4 \ 5 \ 10 \ 11 \ 14 \ 15
 
 操作系统：windows 11
 
@@ -36,13 +36,13 @@
 
 ## 组员分工
 
-## 完成项目
+## 完成项目（点击可直接查看实验报告与代码）
 
 ### Project1: implement the naïve birthday attack of reduced SM3
 
 [Lab Report](project1/README.md)
 
-[Code.c++]loading......
+[Code.c++](project1/birthday_attack.cpp)
 
 [Code.python](project1/birthday_attack_of_reduced_SM3.py)
 
