@@ -18,7 +18,7 @@
 
 ### 查找S盒
 
-```php
+```c
 unsigned long findinsbox(unsigned long b) {
 	unsigned char a[4];
 	
@@ -33,7 +33,7 @@ unsigned long findinsbox(unsigned long b) {
 
 ### 循环左移
 
-```php
+```c
 long loopLeft(long a, int length) {
 	
 	for (int i = 0; i < length; i++) {
@@ -44,7 +44,7 @@ long loopLeft(long a, int length) {
 ```
 
 ### 线性变换函数L
-```php
+```c
 long functionL1(long a) {
 	return a ^ loopLeft(a, 2) ^ loopLeft(a, 10) ^ loopLeft(a, 18) ^ loopLeft(a, 24);
 }
@@ -56,7 +56,7 @@ long functionL2(long a) {
 
 ### 合成变换T
 
-```php
+```c
 //加密用T1，解密用T2
 long T1(long a) {
 	return functionL1(findinsbox(a)) ;
@@ -67,7 +67,7 @@ long T2(long a) {
 ```
 
 ### 密钥拓展
-```php
+```c
 void Keyextend(long MK[],long K[],long RK[]) {
 	
 	for (int i = 0; i < 4; i++) {
@@ -82,7 +82,7 @@ void Keyextend(long MK[],long K[],long RK[]) {
 
 ### 加密算法
 
-```php
+```c
 void encryptSM4(long X[], long RK[] , long Y[]) {
 	for (int i = 0; i < 32; i++) {
 		X[(i + 4) % 4] = X[i % 4] ^ T1(X[(i + 1) % 4] ^ X[(i + 2) % 4] ^ X[(i + 3) % 4] ^ RK[i]);
@@ -95,7 +95,7 @@ void encryptSM4(long X[], long RK[] , long Y[]) {
 
 ### 解密算法
 
-```php
+```c
 void decryptSM4(long X[], long RK[], long Y[]) {
 
 	long RKinvert[32];
@@ -128,7 +128,7 @@ void decryptSM4(long X[], long RK[], long Y[]) {
 
 1.初始化上下文
 
-```php {.line-numbers} 
+```c
 EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
 EVP_CIPHER_CTX_init(ctx);
 ```
@@ -136,17 +136,17 @@ EVP_CIPHER_CTX_init(ctx);
 
 工作模式为ECB模式
 
-```php {.line-numbers}
+```c
 const EVP_CIPHER* cipher = EVP_sm4_ecb();
 ```
 3.初始化加密操作
 
-```php {.line-numbers}
+```c
 EVP_EncryptInit_ex(ctx, cipher, NULL, key, NULL);
 ```
 4.加密
 
-```php {.line-numbers}
+```c
 long len;
 EVP_EncryptUpdate(ctx, ciphertext, &len, plaintext, plaintext_len);
 long ciphertext_len = len;
@@ -155,7 +155,7 @@ ciphertext_len += len;
 ```
 5.清理上下文
 
-```php {.line-numbers}
+```c
 EVP_CIPHER_CTX_free(ctx);
 ```
 
@@ -165,7 +165,7 @@ EVP_CIPHER_CTX_free(ctx);
 
 1.初始化上下文
 
-```php {.line-numbers}
+```c
 EVP_CIPHER_CTX* ctx = EVP_CIPHER_CTX_new();
 EVP_CIPHER_CTX_init(ctx);
 ```
@@ -173,17 +173,17 @@ EVP_CIPHER_CTX_init(ctx);
 
 工作模式为ECB模式
 
-```php {.line-numbers}
+```c
 const EVP_CIPHER* cipher = EVP_sm4_ecb();
 ```
 3.初始化解密操作
 
-```php {.line-numbers}
+```c
 EVP_DecryptInit_ex(ctx, cipher, NULL, key, NULL);
 ```
 4.解密
 
-```php {.line-numbers}
+```c
 long len;
 EVP_DecryptUpdate(ctx, plaintext_decrypt, &len, ciphertext, ciphertext_len);
 long plaintext_len = len;
@@ -192,7 +192,7 @@ plaintext_len += len;
 ```
 5.清理上下文
 
-```php {.line-numbers}
+```c
 EVP_CIPHER_CTX_free(ctx);
 ```
 6.返回解密出的数据
