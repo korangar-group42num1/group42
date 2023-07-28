@@ -26,7 +26,7 @@
 
 编译语言：C
 
-### (3) project 1 \ 2 \ 3 \ 4 \ 5 \ 10 \ 11 \ 14 \ 15
+### (3) project 1 \ 2 \ 3 \ 4 \ 5 \ 10 \ 11 \ 14 \ 15 \ 16
 
 操作系统：windows 11
 
@@ -115,3 +115,13 @@
 [Code.Alice]loading......
 
 [Code.Bob]loading......
+
+### Project16: implement sm2 2P decrypt with real network communication
+
+[Lab Report](project16/README.md)
+
+[Code.sm2](project16/sm2.py)
+
+[Code.Alice](project16/Alice.py)
+
+[Code.Bob](project16/Bob.py)
