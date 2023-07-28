@@ -38,7 +38,7 @@
 
 ### 关键代码
 
-```php {.line-numbers}
+```python
 
 def cf(v,set_512,i):
     #optimize1
