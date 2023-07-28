@@ -9,8 +9,43 @@
 ## 实验思路
 
     1.首先生成一个随机消息msg，计算其SM3哈希值hash1=hash(msg)
+    
     2.以上一步计算出的哈希值为原像，计算hash1的哈希值hash2=hash(hash1)
+    
     3.以此类推，不断循环计算知道出现前n比特发生碰撞
+
+## 关键代码
+
+```python
+def rho(n):
+    hash_list=[]
+    hash_list_bit=[]
+    msg=generate_random_str(64)
+    
+
+    while(1):
+        if(len(hash_list)==0):
+            hash_msg=sm3_hash(msg.encode())
+        else:
+            hash_msg=sm3_hash(hash_list[len(hash_list)-1].encode())
+        
+        if(hash_msg[0:n//4] in hash_list_bit):
+
+            index=hash_list_bit.index(hash_msg[0:n//4])-1
+            
+            hash_list.append(hash_msg)
+            hash_list_bit.append(hash_msg[0:n//4])
+            
+            print(n,"bits collision: ")
+            print(hash_list[len(hash_list)-2],"and",hash_list[index])
+            print(hash_list[len(hash_list)-2]," SM3 Hash: ",sm3_hash(hash_list[len(hash_list)-2].encode()))
+            print(hash_list[index]," SM3 Hash: ",sm3_hash(hash_list[index].encode()))
+            print("collision: ",hash_msg[0:n//4])
+            return
+        else:
+            hash_list.append(hash_msg)
+            hash_list_bit.append(hash_msg[0:n//4])
+```
 
 # 运行效果（攻击至 40 bits）
 
