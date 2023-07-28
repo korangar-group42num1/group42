@@ -9,6 +9,90 @@
     4.选取多组消息（较小比特），测试攻击成功的比例
     5.单独测试对于较大比特的攻击
 
+## 关键代码
+
+### python
+
+```python
+# Collision finding
+def get_collision(n):
+    str_list=[]
+    index=-1
+    index=int(index)
+    while(index<int(1.177*pow(2,n//2))):
+        index+=1
+        rand_i=generate_random_str(random.randint(1,100))
+        if(rand_i in str_list):
+            index-=1
+            continue
+        str_list.append(rand_i)
+    for i in range(0,int(1.177*pow(2,n//2))):
+        str_list_i=str_list[i]
+        hash_i=sm3_hash(str_list_i.encode())
+        for j in range(i+1,int(1.177*pow(2,n//2))):
+            str_list_j=str_list[j]
+            hash_j=sm3_hash(str_list_j.encode())
+            for k in range(0,n//4):
+                if(hash_i[k]!=hash_j[k]):
+                    break
+                if(k==n//4-1):
+                    print(n," bits collision:")
+                    print(str_list_i," and ",str_list_j)
+                    print(str_list_i," sm3 hash: ",hash_i)
+                    print(str_list_j," sm3 hash: ",hash_j)
+                    print("collision : ",end="")
+                    for bit in range(0,n//4):
+                        print(hash_i[bit],end="")
+                    print("\n")
+                    return 1
+    print(n,"bits not found\n")
+    return 0
+```
+
+### cpp
+
+```C++
+int collision(int bit) {
+    unsigned long long all = unsigned long long(1.177 * pow(2, bit / 2));
+    unsigned long long i = 0;
+    while(i<all) {
+        string rand_i = uniqueName(50);
+        string hash_i = sm3_hash(rand_i);
+        data_list[i] = rand_i;
+        hash_list[i] = hash_i;
+        i++;
+    }
+    for (unsigned long long i=0; i < all; i++) {
+        string data_i = data_list[i];
+        string hash_i = hash_list[i];
+        for (unsigned long long j = i + 1; j < all; j++) {
+            string data_j = data_list[j];
+            string hash_j = hash_list[j];
+            for (int k = 0; k < bit / 4; k++) {
+                if (hash_i[k] != hash_j[k]) {
+                    break;
+                }
+                if (k == bit/4 - 1) {
+                    cout << bit << " bits collision: " << endl;
+                    cout<< data_i << " and " << data_j << endl;
+                    cout << data_i << " SM3 Hash: " << hash_i << endl;
+                    cout << data_j << " SM3 Hash: " << hash_j << endl;
+                    cout << "collision : ";
+                    for (int p = 0; p < bit / 4; p++) {
+                        cout << hash_j[p];
+                    }
+                    cout << endl;
+                    return 1;
+                }
+            }
+        }
+
+    }
+    cout << bit<<" bits not found;" << endl;
+    return 0;
+}
+```
+
 # 运行效果（攻击至 32 bits）
 
 各组成功概率约等于**50%**，符合生日攻击原理。
