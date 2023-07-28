@@ -20,7 +20,7 @@
 
 #### Bob
 
-```php
+```python
 # Generate sub private key d1
 d1=random.randint(1,n-1)
 
@@ -36,7 +36,7 @@ bob.sendto(y.encode(),addr)
 
 #### Alice
 
-```php
+```python
 #  (1) Generate sub private key d2
 d2=random.randint(1,n-1)
 
@@ -60,7 +60,7 @@ p=sm2.elliptic_add(p[0],p[1],X,-Y)
 
 #### Bob
 
-```php
+```python
 # (3) Set z to be identifier for both parties, message is m
 m="SDU2021Project15"
 z="_bob"
@@ -81,7 +81,7 @@ bob.sendto(e.encode(),addr)
 
 #### Alice
 
-```php
+```python
 # Receive q1,e
 x,addr=alice.recvfrom(1024)
 x=int(x.decode(),16)
@@ -100,7 +100,7 @@ e=int(e.decode(),16)
 
 #### Alice
 
-```php
+```python
 # (4) Generate partial signature r
 # Randomly generate k2 k3
 k2=random.randint(1,n-1)
@@ -131,7 +131,7 @@ alice.sendto(hex(s3).encode(),addr)
 
 #### Bob
 
-```php
+```pyhton
 # Receive r,s2,s3
 r,addr=bob.recvfrom(1024)
 r=int(r.decode(),16)
@@ -151,7 +151,7 @@ s3=int(s3.decode(),16)
 
 #### Bob
 
-```php
+```python
 # (5) Generate signature (r,s)
 # Compute s=(d1*k1)*s2+d1*s3-r mod n
 s=((d1*k1)*s2+d1*s3-r)%n
