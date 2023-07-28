@@ -71,7 +71,7 @@ trees differently.)
 
 计算每个消息的哈希值
 
-```php {.line-numbers} 
+```python
     for i in range(0,len(leaves)):
         leaf='0x00'+leaves[i]
         #print(leaf)
@@ -82,7 +82,7 @@ trees differently.)
 
 构造哈希树
 
-```php {.line-numbers} 
+```python
     while (len_tree_temp > 1):
         tree_temp = []
         #print(tree)
@@ -112,7 +112,7 @@ trees differently.)
 
 注意区分**左右节点**
 
-```php {.line-numbers}
+```python
     for i in range(0,len(tree)-1):
         if(site%2==0):
             brother_site=site+1
@@ -132,7 +132,7 @@ trees differently.)
 
 逐步计算验证消息
 
-```php {.line-numbers}
+```python
 
     for i in range(0,len(hash_list_verify)):
         if(hash_list_left[i]==1):
@@ -156,7 +156,7 @@ trees differently.)
 
 证明过程中出现错误（如消息不存在或消息位置错误），同理。
 
-```php {.line-numbers}
+```python
 
 def exclusion_proof(msg,tree,site):
     if(inclusion_proof(msg,tree,site)==1):
