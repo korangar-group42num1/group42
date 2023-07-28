@@ -163,6 +163,11 @@ if(s!=0 or s!=n-r):
     print(hex(s))
 ```
 
+# 运行效果
+
+![image](https://github.com/korangar-group42num1/group/assets/129478905/6c091e92-1202-4c4b-b216-bdd7f2a3b6c1)
+
+
 # 参考资料
 
 1. https://blog.csdn.net/xiaofengdada/article/details/122684715?ops_request_misc
