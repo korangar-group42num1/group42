@@ -50,7 +50,7 @@
 
 [Lab Report](project2/REAMME.md)
 
-[Code]loading......
+[Code](project2/Rho_reduced_SM3.py)
 
 ### Project3: implement length extension attack for SM3, SHA256, etc.
 
