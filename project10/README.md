@@ -53,7 +53,7 @@ ECDSA在以太坊中的作用包括：
 
 ### 代码实现
 
-```php
+```python
 def get_address(verify_key):
     h=keccak(verify_key.encode()).hex()
     address='0x'+h[-40:]
@@ -136,7 +136,7 @@ def get_address(verify_key):
  
 4. 使用公钥验证私钥签名
    
-```php
+```python
 def sign(secret_key,msg):
     private_key=SigningKey.from_string(bytes.fromhex(secret_key),curve=SECP256k1)
     signature=private_key.sign(bytes(msg,'utf-8'))
