@@ -10,19 +10,19 @@
 
 1.生成**会话密钥**
 
- ```php {.line-numbers}
+ ```python
 session_key = get_random_bytes(16)
  ```
 
 2.**压缩**消息 
 
- ```php {.line-numbers} 
+ ```python
  hash_data = hashlib.sha256(data).digest()
  ```
 
 3.用**会话密钥**和 **AES** 加密压缩后的消息
 
- ```php {.line-numbers} 
+ ```python
  iv = get_random_bytes(16)
  cipher = AES.new(session_key, AES.MODE_CBC, iv)
  ciphertext_aes = cipher.encrypt(pad(hash_data, AES.block_size))
@@ -30,14 +30,14 @@ session_key = get_random_bytes(16)
 
 4.用 **sm2** 加密**会话密钥**
 
- ```php {.line-numbers} 
+ ```python
 sm2_crypt = sm2.CryptSM2(public_key=public_key, private_key=private_key)
 ciphertext_sm2 = sm2_crypt.encrypt(session_key)
  ```
 
 5.将前两步生成的消息拼合在一起，转为文本消息，即为加密后消息
 
- ```php {.line-numbers} 
+ ```python
 ciphertext=(ciphertext_sm2+ciphertext_aes).hex().encode('utf-8')
 ```
 
