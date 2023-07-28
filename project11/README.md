@@ -10,6 +10,24 @@
 
 `k = SHA256(d + HASH(m))`
 
+## 关键代码
+
+```python
+def gen_k(privateKey, data):
+    # Converts a string to an array of bytes
+    privateKey_bytes = privateKey.encode('utf-8')
+    #data_bytes = data.encode('utf-8')
+
+    # Compute HASH(data)
+    hash_data = hashlib.sha256(data).digest()
+
+    # Concatenate the string d with HASH(m) to calculate SHA256
+    concatenated_bytes = privateKey_bytes + hash_data
+    k = hashlib.sha256(concatenated_bytes).hexdigest()
+
+    return k
+```
+
 
 # 运行指导
 
