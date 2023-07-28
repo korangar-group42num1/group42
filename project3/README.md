@@ -16,8 +16,8 @@ SM3 和 MD5 的迭代过程类似，也采用 **Merkle-Damgard结构**
 
 ![Length Extension Attack](https://github.com/korangar-group42num1/group/assets/129478905/5bff1edd-3292-48fe-bb72-561032063713)
 
-长度扩展攻击是基于**Merkle-Damgard结构**的一种攻击方式。对于消息msg，攻击者知道**msg的哈希值hash(msg)** 和一个**任意的其他消息（ext）**,
-不需要知道msg就可以计算出**hash(msg_padding||ext_padding)**
+长度扩展攻击是基于 **Merkle-Damgard结构** 的一种攻击方式。对于消息msg，攻击者知道 **msg的哈希值hash(msg)** 和一个 **任意的其他消息（ext）**,
+不需要知道msg就可以计算出 **hash(msg_padding||ext_padding)** 
 
     1.用hash(msg)替代标准sm3中的iv，计算hash_(ext)
     
@@ -37,7 +37,7 @@ SM3 和 MD5 的迭代过程类似，也采用 **Merkle-Damgard结构**
 
 用msg_hash作为初始向量加密msg_ext
 
-```php {.line-numbers} 
+```python
 def length_extension_attack(msg_hash,msg_ext):
     iv_new=[]
     for i in range(0,8):
@@ -51,7 +51,7 @@ def length_extension_attack(msg_hash,msg_ext):
 用于验证攻击的正确性。
 若与该函数的返回值与长度拓展攻击的返回值相等，则攻击成功
 
-```php {.line-numbers} 
+```python
 def verify_length_extension_attack(msg,ext):
     msg_padding=sm3.padding(message.encode().hex())
     ext_padding=sm3.padding(ext.encode().hex())
