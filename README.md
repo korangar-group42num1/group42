@@ -56,9 +56,9 @@
 
 [Lab Report](project3/README.md)
 
-[Code.sm3]loading......
+[Code.sm3](project3/sm3.py)
 
-[Code.length_extension_attack]loading......
+[Code.length_extension_attack](project3/Length_Extensiona_Attack.py)
 
 ### Project4: do your best to optimize SM3 implementation (software)
 
