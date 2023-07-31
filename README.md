@@ -64,11 +64,11 @@
 
 [Lab Report](project4/README.md)
 
-[Code.sm3]loading......
+[Code.sm3](project4/sm3.py)
 
-[Code.sm3_optimize]loading......
+[Code.sm3_optimize](project4/sm3_optimize.py)
 
-[Code.test]loading......
+[Code.main](project4/main.py)
 
 ### Project5: Impl Merkle Tree following RFC6962
 
