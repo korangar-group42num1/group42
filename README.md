@@ -36,7 +36,7 @@
 
 ## 组员分工
 
-## 完成项目（点击可直接查看实验报告与代码）
+## 完成项目（包含实验报告与代码，点击即可查看每个 project 的实现方式以及实现效果）
 
 ### Project1: implement the naïve birthday attack of reduced SM3
 
