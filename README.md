@@ -42,6 +42,10 @@
 
 ## 组员分工
 
+**所有完成项目由个人完成。**
+
+**陈茹涵 202100460143**
+
 ## 完成项目（包含实验报告与代码，点击即可查看每个 project 的实现方式以及实现效果）
 
 ### Project1: implement the naïve birthday attack of reduced SM3
