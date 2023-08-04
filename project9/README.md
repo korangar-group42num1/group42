@@ -2,6 +2,8 @@
 
 **Project9: AES / SM4 software implementation**
 
+# SM4
+
 两种实现方式：
 
 **不调用openssl库**
@@ -200,6 +202,42 @@ EVP_CIPHER_CTX_free(ctx);
 ## 运行效果
 
 ![C@)Q 6FV K4BLZ5J`5`ARPC](https://github.com/korangar-group42num1/group/assets/129478905/a624dd84-4e5e-4aaa-826e-4b78ee8c9942)
+
+# AES 
+
+## 运行指导
+
+代码可直接运行
+
+## 关键代码
+
+```python
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad
+from Crypto.Util.Padding import unpad
+
+key=b'1234567890123456'
+iv=b'abcdefghijklmnop'
+cipher=AES.new(key,AES.MODE_CBC,iv)
+
+text=b'SDU2021Project9'
+padtext=pad(text,16,style='pkcs7')
+cipherText=cipher.encrypt(padtext)
+print(padtext)
+print(cipherText)
+
+decrypter=AES.new(key,AES.MODE_CBC,iv)
+plaintext=decrypter.decrypt(cipherText)
+unpadtext=unpad(plaintext,16,'pkcs7')
+print(plaintext)
+print(unpadtext)
+
+```
+
+## 运行效果
+
+![image](https://github.com/korangar-group42num1/group42/assets/129478905/969e3b9f-bd64-4816-942b-5c85f74f5cc2)
+
 
 
 
