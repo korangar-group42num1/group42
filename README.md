@@ -28,7 +28,7 @@
 
 编译语言：C
 
-### (3) project 1 \ 2 \ 3 \ 4 \ 5 \ 9 \ 10 \ 11 \ 13 \ 14 \ 15 \ 16 \ 19
+### (3) project 1 \ 2 \ 3 \ 4 \ 5 \ 9 \ 10 \ 11 \ 13 \ 14 \ 15 \ 16 \ 19 \ 21
 
 操作系统：windows 11
 
@@ -149,6 +149,14 @@
 [Lab Report](project19/README.md)
 
 [Code](project19/forge_Satoshi.py)
+
+### Project21: Schnorr Bacth
+
+[Lab Report](project21/README.md)
+
+[Code.Schnorr](project21/Schnorr.py)
+
+[Code.secp256k1](project21/secp256k1.py)
 
 ### Project22: research report on MPT
 
